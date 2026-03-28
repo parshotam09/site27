@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Company</title>
+    <style>
+        :root {
+            --main-color: #f4e01e;
+            --black: #111111;
+            --gray: #666;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .top-bar {
+            background: var(--black);
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--main-color);
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu ul li {
+            margin: 0 15px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn {
+            background: var(--main-color);
+            padding: 12px 25px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8%;
+            color: white;
+        }
+
+        .main-content {
+            padding: 60px 8%;
+        }
+
+        .headline {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .info-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* --- Images Section Fix --- */
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .img-row img {
+            width: 100%;
+            height: 350px; /* Fix height */
+            object-fit: cover; /* Image ko box mein fit karega bina kharab kiye */
+            display: block;
+            border-radius: 4px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .stat-box {
+            border: 1px solid #ddd;
+            padding: 40px 20px;
+            flex: 1;
+            position: relative;
+        }
+
+        .corner {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 35px;
+            background: var(--main-color);
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+
+        .steps-section {
+            background: var(--light-bg);
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 40px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 30px;
+            text-align: left;
+            border: 1px solid #eee;
+        }
+
+        .num {
+            background: var(--main-color);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: var(--black);
+            color: white;
+            padding: 50px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 800px) {
+            .info-grid, .img-row, .stats, .steps-container, .footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logo">BUIL<span>TY</span></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <a href="#" class="btn">Get Free Quote</a>
+    </div>
+
+    <div class="banner">
+        <h1>About Us</h1>
+    </div>
+
+    <div class="main-content">
+        <h2 class="headline">Construction industry representing the interests of small and medium-sized building companies</h2>
+        
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Who We Are?</h3>
+                <p>We are resolute in our mission to not only make a difference to the lives of people today but also to leave a legacy for future generations.</p>
+            </div>
+            <div class="info-box">
+                <h3>What's in it for me?</h3>
+                <p>• High performing, low carbon concrete solution</p>
+                <p>• Value for workers' skills</p>
+                <p>• Excellent standards in construction</p>
+            </div>
+        </div>
+
+        <div class="img-row">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800" alt="Construction Worker">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" alt="Engineers Discussion">
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h2>10+</h2>
+                <p>Years Experience</p>
+                <div class="corner"></div>
+            </div>
+            <div class="stat-box">
+                <h2>300</h2>
+                <p>People Team</p>
+                <div class="corner"></div>
+            </div>
+            <div class="stat-box">
+                <h2>21+</h2>
+                <p>Locations</p>
+                <div class="corner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="steps-section">
+        <h2>How it Works</h2>
+        <div class="steps-container">
+            <div class="step-card"><div class="num">1.</div><h4>Phase Plan</h4><p>Step connects design process.</p></div>
+            <div class="step-card"><div class="num">2.</div><h4>Design Plan</h4><p>Detailed plan for goals.</p></div>
+            <div class="step-card"><div class="num">3.</div><h4>Layout</h4><p>Single point of truth.</p></div>
+            <div class="step-card"><div class="num">4.</div><h4>Quality</h4><p>Prior to construction.</p></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div><h4>Information</h4><p>We solve complex tasks with precision.</p></div>
+        <div><h4>Contact</h4><p>901 N Pitt Str., USA<br>username@domain.com</p></div>
+        <div><h4>Newsletter</h4><p>Stay updated with our news.</p></div>
+    </div>
+
+</body>
+</html>
